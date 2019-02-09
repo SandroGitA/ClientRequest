@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>простой запрос</title>
+</head>
+<body>
+  <div style="text-align: center;">
+    <h3>Дорогой друг, я страничка которая делает простой запрос на твой сервер :)</h3>
+    <label for="postServer">post-url</label>
+    <input id="postServer" style="width: 338px;" type="text" placeholder="Адресс сервера на который отправлять POST-Запрос" value="https://localhost:44342/values/">
+    <label for="getServer">get-url</label>
+    <input id="getServer" style="width: 338px;" type="text" placeholder="Адресс сервера на который отправлять GET-Запрос" value="https://localhost:44342/values/">
+    <p>Тип запроса: <strong id="outputType"></strong></p>
+    <p>Ответ: <strong id="outputRequest"></strong></p>
+    <button id="POSTBtn">Отправить POST-запрос</button>
+    <button id="GETBtn">Отправить GET-запрос</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
