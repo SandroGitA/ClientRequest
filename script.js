@@ -10,16 +10,6 @@ const answerOutput = document.querySelector('#outputRequest'); // вывод о�
 const urlGetInput = document.querySelector('#getServer'); // инпут хранящий url для отправки GET
 const urlPostInput = document.querySelector('#postServer'); // инпут хранящий url для отправки POST
 
-const newTask = {
-  id: new Date().getTime(), 
-  dateBind: new Date().getTime(),
-  dateCreate: new Date().getTime(),
-  title: "task",
-  descr: "jor",
-  isPin: false,
-  isComplete: false
-};
-
 // GET запрос (загружаю данные)
 const backendLoad = () => {
   const getRequest = new XMLHttpRequest();
@@ -80,6 +70,17 @@ const backendSave = (data = 1) => {
 };
 
 GetBtn.addEventListener('click', backendLoad);
+
+const newTask = {
+  id: new Date().getTime(), 
+  dateBind: new Date().getTime(),
+  dateCreate: new Date().getTime(),
+  title: "task",
+  descr: "jor",
+  isPin: false,
+  isComplete: false
+};
+
 PostBtn.addEventListener('click', () => {
   backendSave(JSON.stringify(newTask));
 });
