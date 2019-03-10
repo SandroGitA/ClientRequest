@@ -65,8 +65,8 @@ const backendSave = (data = 1) => {
     answerOutput.textContent = `Ошибка соединения`;
   })
 
-  xhr.open('POST', URL_SEND+"?jsonstring="+data);
-  xhr.send();
+  xhr.open('POST', URL_SEND);
+  xhr.send(data);
 };
 
 GetBtn.addEventListener('click', backendLoad);
