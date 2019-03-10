@@ -56,8 +56,6 @@ const backendLoad = () => {
 const backendSave = (data = 1) => {
   const xhr = new XMLHttpRequest();
 
-  //debugger;
-
   URL_SEND = urlPostInput.value; // получаем адресс на который отправлять POST
 
   typeOutput.textContent = ''; // очищаем вывод
@@ -78,12 +76,10 @@ const backendSave = (data = 1) => {
   })
 
   xhr.open('POST', URL_SEND+"?jsonstring="+data);
-  //xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
 };
 
 GetBtn.addEventListener('click', backendLoad);
-//PostBtn.addEventListener('click', backendSave);
 PostBtn.addEventListener('click', () => {
   backendSave(JSON.stringify(newTask));
 });
