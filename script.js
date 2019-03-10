@@ -75,8 +75,8 @@ const newTask = {
   id: new Date().getTime(), 
   dateBind: new Date().getTime(),
   dateCreate: new Date().getTime(),
-  title: "task",
-  descr: "jor",
+  title: "Foo",
+  descr: "Bar",
   isPin: false,
   isComplete: false
 };
